@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      body { font-family: 'Alegreya'; }
+      .video-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 ratio */
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Introduzione
+
+---
+
+# Video esempio senza autoplay
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/ri8shXEGPew"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+  </iframe>
+</div>
+
+???
+
+Il video parte automaticamente quando apri la slide.
+Parametri usati:
+- autoplay=1: avvio automatico
+- mute=1: necessario per policy browser
+- loop=1: ripetizione continua
+- playlist=VIDEO_ID: necessario per loop
+
+---
+
+# Video esempio con autoplay
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/ri8shXEGPew?autoplay=1"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+  </iframe>
+</div>
+
+???
+
+Il video parte automaticamente quando apri la slide.
+Parametri usati:
+- autoplay=1: avvio automatico
+- mute=1: necessario per policy browser
+- loop=1: ripetizione continua
+- playlist=VIDEO_ID: necessario per loop
+
+---
+
+# Slide successiva
+
+Contenuto normale
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
