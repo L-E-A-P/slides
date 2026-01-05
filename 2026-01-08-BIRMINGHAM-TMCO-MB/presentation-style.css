@@ -20,10 +20,16 @@ body {
   padding: 0;
 }
 
-h1, h2, h3 {
+h1, h2{
   font-family: 'Datalegreya';
   font-weight: normal;
   text-align: center;
+}
+
+h3 {
+  font-family: 'Datalegreya';
+  font-weight: normal;
+  text-align: left;
 }
 
 h1 {
