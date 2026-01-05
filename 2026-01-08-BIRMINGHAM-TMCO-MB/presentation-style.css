@@ -15,7 +15,7 @@ html, body {
 
 body {
   font-family: 'Alegreya Sans';
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0;
   padding: 0;
 }
@@ -32,6 +32,10 @@ h1 {
 
 h2 {
   margin-top: 0; /* Elimina margine superiore h2 per ridurre spazio con h1 */
+}
+
+.remark-notes {
+  font-size: 1em;
 }
 
 .remark-code,
