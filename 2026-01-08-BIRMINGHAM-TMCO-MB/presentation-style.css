@@ -132,3 +132,28 @@ h2 {
 .full-width-title {
   margin-bottom: 1em;
 }
+
+/* Stile per citazioni/blockquote */
+blockquote {
+  font-style: italic;
+  text-align: left;
+  font-size: 2em; /* Più grande del testo normale */
+  line-height: 1.5;
+  margin: 1.5em 2em;
+  padding: 0;
+  border-left: none; /* Nessun bordo */
+}
+
+blockquote p {
+  margin: 0.5em 0;
+}
+
+/* Fonte della citazione */
+blockquote .source,
+blockquote cite {
+  display: block;
+  font-style: normal; /* Non corsivo */
+  font-size: 0.75em; /* Più piccolo */
+  margin-top: 1em;
+  opacity: 0.8;
+}
