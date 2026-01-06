@@ -13,6 +13,22 @@ html, body {
   overflow: hidden;
 }
 
+/* Alegreya Sans Italic */
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('Alegreya_Sans/AlegreyaSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Datalegreya Regular */
+@font-face {
+  font-family: 'Datalegreya';
+  src: url('datalegreya/datalegreya-gradient.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'Alegreya Sans';
   margin: 0;
