@@ -5,14 +5,7 @@
 
 /* Font utilizzati */
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-/* Alegreya Sans Italic */
-@font-face {
-  font-family: 'AlegreyaSans';
-  src: url('Alegreya_Sans/AlegreyaSans-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,600;1,400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* Datalegreya Regular */
 @font-face {
