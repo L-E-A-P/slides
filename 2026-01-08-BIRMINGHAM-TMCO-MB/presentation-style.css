@@ -5,7 +5,7 @@
 
 /* Font utilizzati */
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,600;1,400&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
 
 /* Datalegreya Regular */
 @font-face {
@@ -15,6 +15,91 @@
   font-style: normal;
 }
 
+.alegreya-sans-thin {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.alegreya-sans-light {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.alegreya-sans-regular {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alegreya-sans-medium {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.alegreya-sans-bold {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.alegreya-sans-extrabold {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.alegreya-sans-black {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.alegreya-sans-thin-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.alegreya-sans-light-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.alegreya-sans-regular-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.alegreya-sans-medium-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.alegreya-sans-bold-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.alegreya-sans-extrabold-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.alegreya-sans-black-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
 /* Base */
 html, body {
   height: 100%;
@@ -23,7 +108,7 @@ html, body {
 }
 
 body {
-  font-family: 'AlegreyaSans';
+  font-family: 'Alegreya Sans';
   margin: 0;
   padding: 0;
 }
