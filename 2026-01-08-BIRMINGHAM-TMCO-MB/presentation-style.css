@@ -9,7 +9,7 @@
 /* Alegreya Sans Italic */
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url('Alegreya_Sans/AlegreyaSans-Italic.ttf') format('truetype');
+  src: url('Alegreya_Sans/AlegreyaSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
@@ -17,7 +17,7 @@
 /* Datalegreya Regular */
 @font-face {
   font-family: 'Datalegreya';
-  src: url('Datalegreya/Datalegreya-Gradient.otf') format('opentype');
+  src: url('Datalegreya/Datalegreya-Thin.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
