@@ -6,13 +6,6 @@
 /* Font utilizzati */
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-/* Base */
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
 /* Alegreya Sans Italic */
 @font-face {
   font-family: 'Alegreya Sans';
@@ -27,6 +20,13 @@ html, body {
   src: url('Datalegreya/Datalegreya-Gradient.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+}
+
+/* Base */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 body {
