@@ -192,7 +192,6 @@ h2 {
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
-  max-height: min(42vh, 500px); /* Vincolo doppio per evitare overflow */
 }
 
 /* Colonne individuali */
@@ -291,11 +290,94 @@ blockquote cite {
  *  FORMATTAZIONE DIALOGHI
  *  ============================================ */
 
+/* Approccio 1: SMALL CAPS (elegante, accademico) */
 .dialogue {
   text-align: left;
   margin: 1.5em 2em;
   line-height: 1.6;
 }
+
+.dialogue p {
+  margin: 0.8em 0;
+}
+
+.dialogue strong {
+  font-variant: small-caps;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Approccio 2: DEFINITION LIST (molto semantico) */
+.dialogue-list {
+  text-align: left;
+  margin: 1.5em 2em;
+}
+
+.dialogue-list dt {
+  font-variant: small-caps;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
+.dialogue-list dd {
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+/* Approccio 3: STILE TEATRALE */
+.theatre {
+  text-align: left;
+  margin: 1.5em 2em;
+  font-family: 'Alegreya Sans';
+}
+
+.theatre .speaker {
+  font-variant: small-caps;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  display: inline;
+}
+
+.theatre .speaker::after {
+  content: ": ";
+}
+
+.theatre p {
+  margin: 0.8em 0;
+  text-indent: 0;
+}
+
+/* Approccio 4: CON INDENTAZIONE (minimal) */
+.dialogue-indent {
+  text-align: left;
+  margin: 1.5em 2em;
+}
+
+.dialogue-indent .speaker {
+  font-variant: small-caps;
+  font-weight: 600;
+  display: block;
+  margin-top: 1em;
+}
+
+.dialogue-indent .line {
+  margin-left: 2em;
+  margin-top: 0.3em;
+  line-height: 1.5;
+}
+
+/* Variante: due personaggi con colori sottili */
+.bremonte {
+  opacity: 1;
+}
+
+.menippo {
+  opacity: 0.85;
+}
+
 
 /* ============================================
    VARIANTI OPZIONALI (per immagini problematiche)
