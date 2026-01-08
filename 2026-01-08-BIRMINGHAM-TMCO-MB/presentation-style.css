@@ -222,7 +222,7 @@ h2 {
 /* Immagini dentro colonne - si adattano al container */
 .columns img {
   max-width: 100%;
-  max-height: min(40vh, 480px); /* Vincolo doppio */
+  max-height: min(60vh, 480px); /* Vincolo doppio */
   width: auto;
   height: auto;
   object-fit: contain;
