@@ -98,7 +98,6 @@
   font-style: italic;
 }
 
-
 /* Base */
 html, body {
   height: 100%;
@@ -136,12 +135,6 @@ h2 {
 /* Note presentatore */
 .remark-notes {
   font-size: 1.5em;
-}
-
-/* Codice */
-.remark-code,
-.remark-inline-code {
-  font-family: 'Ubuntu Mono';
 }
 
 /* Container Remark */
@@ -186,7 +179,7 @@ h2 {
   display: block;
   margin: 0 auto;
   max-width: 85%;
-  max-height: 50vh; /* Ridotto da 60vh - considera titolo+footer */
+  max-height: min(42vh, 500px); /* Vincolo doppio: vh + px assoluti */
   width: auto;
   height: auto;
   object-fit: contain;
@@ -199,7 +192,7 @@ h2 {
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
-  max-height: 50vh; /* Ridotto da 60vh - spazio reale disponibile */
+  max-height: min(42vh, 500px); /* Vincolo doppio per evitare overflow */
 }
 
 /* Colonne individuali */
@@ -230,7 +223,7 @@ h2 {
 /* Immagini dentro colonne - si adattano al container */
 .columns img {
   max-width: 100%;
-  max-height: 45vh; /* Limite esplicito per sicurezza */
+  max-height: min(40vh, 480px); /* Vincolo doppio */
   width: auto;
   height: auto;
   object-fit: contain;
@@ -391,18 +384,18 @@ blockquote cite {
    VARIANTI OPZIONALI (per immagini problematiche)
    ============================================ */
 
-/* Quando 50vh è ancora troppo - usa questi override */
-.img-h-40 img { max-height: 40vh !important; }
-.img-h-35 img { max-height: 35vh !important; }
-.img-h-30 img { max-height: 30vh !important; }
+/* Quando 42vh è ancora troppo - usa questi override */
+.img-h-35 img { max-height: min(35vh, 420px) !important; }
+.img-h-30 img { max-height: min(30vh, 360px) !important; }
+.img-h-25 img { max-height: min(25vh, 300px) !important; }
 
 /* Per colonne con immagini che sbordano */
 .columns-small {
-  max-height: 40vh !important;
+  max-height: min(35vh, 420px) !important;
 }
 
 .columns-small img {
-  max-height: 38vh !important;
+  max-height: min(33vh, 400px) !important;
 }
 
 /* Per immagini molto verticali */
