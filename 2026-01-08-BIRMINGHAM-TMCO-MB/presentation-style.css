@@ -192,7 +192,6 @@ h2 {
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
-  max-height: min(60vh, 500px); /* Vincolo doppio per evitare overflow */
 }
 
 /* Colonne individuali */
