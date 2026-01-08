@@ -179,7 +179,7 @@ h2 {
   display: block;
   margin: 0 auto;
   max-width: 85%;
-  max-height: min(42vh, 500px); /* Vincolo doppio: vh + px assoluti */
+  max-height: min(60vh, 500px); /* Vincolo doppio: vh + px assoluti */
   width: auto;
   height: auto;
   object-fit: contain;
@@ -192,7 +192,7 @@ h2 {
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
-  max-height: min(42vh, 500px); /* Vincolo doppio per evitare overflow */
+  max-height: min(60vh, 500px); /* Vincolo doppio per evitare overflow */
 }
 
 /* Colonne individuali */
