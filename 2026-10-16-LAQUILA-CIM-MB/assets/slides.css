@@ -1,0 +1,140 @@
+/* leaphz.net look — So Simple dark skin, adapted for a projector.
+   Sizes use vh so the deck scales with the window; tuned at 1920×1080. */
+@font-face { font-family: 'Alegreya'; src: url('fonts/alegreya-regular.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Alegreya'; src: url('fonts/alegreya-italic.woff2') format('woff2'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Alegreya'; src: url('fonts/alegreya-700.woff2') format('woff2'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Alegreya Sans'; src: url('fonts/alegreya-sans-regular.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Alegreya Sans'; src: url('fonts/alegreya-sans-italic.woff2') format('woff2'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Alegreya Sans'; src: url('fonts/alegreya-sans-700.woff2') format('woff2'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Ubuntu Mono'; src: url('fonts/ubuntu-mono-regular.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+
+:root {
+  --bg: #230031;
+  --bg-deep: #15001d;
+  --fg: #F0F8FF;
+  --fg-dim: #b9b3c2;
+  --accent: #89FF59;
+  --quote-bg: #2d1a35;
+  --serif: 'Alegreya', Georgia, serif;
+  --sans: 'Alegreya Sans', 'Helvetica Neue', sans-serif;
+  --mono: 'Ubuntu Mono', Menlo, monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--serif);
+  overflow: hidden;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── stage ─────────────────────────────────────────────────────── */
+#stage {
+  position: fixed; inset: 0;
+  padding: 9vh 10vw 12vh 10vw;
+  overflow-x: hidden; overflow-y: auto;
+  font-size: 4.2vh; line-height: 1.45;
+  opacity: 0; transition: opacity .25s ease;
+}
+#stage.visible { opacity: 1; }
+#stage h1, #stage h2, #stage h3 {
+  font-family: var(--sans); font-weight: 700; color: var(--fg);
+  line-height: 1.15; margin: 0 0 3vh 0;
+}
+#stage h1 { font-size: 8vh; }
+#stage h2 { font-size: 6vh; }
+#stage h3 { font-size: 5vh; }
+#stage p { margin: 0 0 2.4vh 0; }
+#stage ul, #stage ol { margin: 0 0 2.4vh 4vh; }
+#stage li { margin: 0 0 1.2vh 0; }
+#stage em { font-style: italic; }
+#stage strong { font-weight: 700; }
+#stage blockquote {
+  margin: 2vh 0; padding: 1.6vh 2.8vh;
+  background: var(--quote-bg); border-left: .6vh solid var(--accent);
+  font-style: italic;
+}
+#stage code { font-family: var(--mono); font-size: .9em; }
+#stage img { max-width: 100%; max-height: 50vh; display: block; margin: 2vh 0; }
+/* <img class="qr"> at the top of a slide: a QR code bottom right, text
+   wrapping around it. An invisible right float as tall as the stage's
+   content box (79vh) minus the QR pushes it down; the QR clears below it. */
+#stage:has(img.qr)::before { content: ''; float: right; width: 0; height: 44.5vh; }
+#stage img.qr { float: right; clear: right; height: 34vh; margin: 0 0 0 3vw; }
+
+/* ── layouts ───────────────────────────────────────────────────── */
+body.layout-title #stage,
+body.layout-section #stage {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: 8vh 8vw;
+}
+body.layout-title #stage h1 { font-size: 8.5vh; margin-bottom: 1.5vh; }
+body.layout-title #stage h2 { font-family: var(--serif); font-weight: 400; font-style: italic; font-size: 5vh; margin-bottom: 5vh; }
+body.layout-title #stage p { font-size: 3.4vh; line-height: 1.5; color: var(--fg); margin-bottom: 1.2vh; }
+body.layout-title #stage .kicker { font-family: var(--mono); font-size: 2.6vh; letter-spacing: .15em; color: var(--accent); margin-bottom: 4vh; }
+body.layout-title #stage img { max-height: 22vh; margin: 0 auto 4vh auto; }
+body.layout-section #stage h1 { font-size: 14vh; letter-spacing: .02em; margin-bottom: 2vh; }
+body.layout-section #stage p { font-size: 4.4vh; font-style: italic; color: var(--fg-dim); }
+/* portrait: a <figure> (photo + credit) floats left at full stage height,
+   text runs beside it, slightly smaller so a paragraph of prose fits */
+body.layout-portrait #stage { font-size: 3.5vh; }
+body.layout-portrait #stage h1 { font-size: 6vh; }
+body.layout-portrait #stage figure { float: left; margin: 0 4vw 2vh 0; }
+body.layout-portrait #stage figure img { max-width: 36vw; max-height: 75vh; margin: 0; }
+/* <p class="footnote">: a programme-note footnote (* …) pinned to the
+   bottom left of the content box, level with the bottom of a .qr */
+#stage p.footnote {
+  position: absolute; left: 10vw; bottom: 12vh; margin: 0;
+  font-size: .7em; color: var(--fg-dim);
+}
+/* <p class="byline"> after a text: its author, right-aligned under it */
+#stage p.byline {
+  text-align: right; font-family: var(--sans); font-size: .8em;
+  letter-spacing: .08em; color: var(--fg-dim);
+}
+body.layout-portrait #stage figcaption {
+  font-family: var(--mono); font-size: 1.8vh; color: var(--fg-dim);
+  margin-top: 1vh;
+}
+
+/* ── chrome ────────────────────────────────────────────────────── */
+#logo {
+  position: fixed; bottom: 2.6vh; left: 2.6vh; height: 6vh; width: auto;
+  opacity: .9;
+}
+/* Anchored right and growing leftwards: the step counter never moves,
+   the gallery hint appears to its left only on stops that have one. */
+#corner {
+  position: fixed; bottom: 2.8vh; right: 3vh;
+  font-family: var(--mono); font-size: 2.2vh; color: var(--accent);
+  letter-spacing: .1em; white-space: pre;
+}
+/* Out of flow: '↓' falls back to another font whose taller metrics would
+   otherwise grow the line box and nudge the counter up. */
+#gallery-hint { position: absolute; right: 100%; bottom: 0; white-space: pre; }
+#gallery-hint .arrow { line-height: 0; } /* keeps its baseline on the counter's */
+#gallery-hint:not(:empty)::after { content: '  ·  '; color: var(--fg-dim); }
+
+/* ── gallery layer (Task 5) ────────────────────────────────────── */
+#gallery {
+  display: none; position: fixed; inset: 0; z-index: 10;
+  flex-direction: column; align-items: center; justify-content: center;
+  background: var(--bg); padding: 4vh 4vw;
+}
+#gallery.visible { display: flex; }
+#gallery img,
+#gallery video { width: 92vw; height: 82vh; object-fit: contain; }
+#gallery iframe { width: 100%; height: 100%; border: 0; }
+#gallery .caption {
+  font-family: var(--mono); font-size: 2.6vh; color: var(--fg-dim);
+  margin-top: 2vh; text-align: center; max-width: 80vw;
+}
+#gallery-indicator {
+  display: none; z-index: 11; position: fixed; bottom: 2.8vh; left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono); font-size: 2.2vh; color: var(--accent); letter-spacing: .1em;
+}

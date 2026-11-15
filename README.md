@@ -5,3 +5,9 @@
 #### _interpretative practice through workshop notes from a teamwork experience_
 
 [jump](https://www.leaphz.net/slides/2026-01-08-BIRMINGHAM-TMCO-MB/index.html)
+
+## XXV Colloquio di Informatica Musicale <br/> Palazzo Spaventa, L'Aquila <br/> 16 Oct 2026
+### sulla soglia: il vestigio e la traccia
+#### _Davide Tedesco, Giuseppe Silvi_
+
+[jump](https://www.leaphz.net/slides/2026-10-16-LAQUILA-CIM-MB/index.html)
